@@ -6,8 +6,11 @@ port = 12345
 serverSocket = socket(AF_INET,SOCK_STREAM)
 serverSocket.bind((host,port)) 
 serverSocket.listen(1)
+def printSocket():
+    print(serverSocket)
 
-LogD("서버 생성완료 대기중입니다.")
+LogD("서버 생성완료. 대기중입니다.")
+printSocket()
 while(1==1):
     connectionSocket,addr = serverSocket.accept() #accept 할동안 기다림
 

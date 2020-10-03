@@ -1,4 +1,3 @@
-
 from ServerTime import *
 
 logdirectory = "/home/codespace/workspace/AMDMServer/logs/"
