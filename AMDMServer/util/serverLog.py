@@ -1,4 +1,4 @@
-from ServerTime import *
+from util.ServerTime import *
 
 logdirectory = "/home/codespace/workspace/AMDMServer/logs/"
 
@@ -41,6 +41,3 @@ def LogW(message):
     f.write(serverlog()+" "+message+"\n")
     f.close()
     return;
-LogD("TEST")
-LogE("TEST")
-LogW("TEST")
