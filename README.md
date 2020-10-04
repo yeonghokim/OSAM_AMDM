@@ -48,8 +48,35 @@
         }
 }
 ```
-### Android 오는거
-
+### Android 데이터 교환
+* 데이터 수신 형태 Type1(Android -> Server) 
+  * type : 기기의 형태
+  * requestType: 요청 타입
+  * id : 기기의 아이디(초기 설정때 서버에서 지급)
+  * lock : 현재 기기의 잠금 유무
+  * lockTime : 기기의 잠금 시간
+```
+{
+        "type": "Android",
+        "requestType": 1,
+        "id": 1234567,
+        "lock": 1,
+        "lockTime": "20201004_13:49:12"
+}
+```
+* 데이터 수신 형태 Type2(Android -> Server) 
+  * type : 기기의 형태
+  * requestType: 요청 타입
+  * id : 기기의 아이디(초기 설정때 서버에서 지급)
+  * turnOnTime : 기기가 켜진 시간
+```
+{
+        "type": "Android",
+        "requestType": 2,
+        "id": 1234567,
+        "turnOnTime": "20201004_13:49:12"
+}
+```
 사이클
 1. 서버 대기상태
 
