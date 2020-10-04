@@ -92,24 +92,24 @@
 
 # DataBase (SQLite)
 ### User Table
-칼럼이름 | 타입 | 널 유무 
--------- | -------- | ----------
-USER_PR | INTEGER | PRIMARY
+칼럼이름 | 타입 | 널 유무  | 외래키 유무
+-------- | -------- | ---------- | ----------
+USER_PR | INTEGER | PRIMARY | 
 USER_ARMYNUMBER | CHAR | X
 USER_NAME | CHAR | X
 PASSWORD | CHAR | X
 USER_DISCHARGEDATE | DATETIME | O 
 UPDATEDATE | DATETIME | X
 ### Phone Table
-칼럼이름 | 타입 | 널 유무 
--------- | -------- | ----------
+칼럼이름 | 타입 | 널 유무  | 외래키 유무
+-------- | -------- | ---------- | ----------
 PHONE_PR | INTEGER | PRIMARY
 USER_UNIQUENUM | INTEGER | X
 PHONE_IP | CHAR | X
 IS_LOCK | INTEGER | X
 ### PhoneCase Table
-칼럼이름 | 타입 | 널 유무 
--------- | -------- | ----------
+칼럼이름 | 타입 | 널 유무  | 외래키 유무
+-------- | -------- | ---------- | ----------
 PHONECASE_PR | INTEGER | PRIMARY
 IS_LOCK | INTEGER | X
 PHONE1_ID | INTEGER | O
@@ -117,8 +117,8 @@ PHONE2_ID | INTEGER | O
 PHONE3_ID | INTEGER | O 
 PHONE4_ID | INTEGER | O
 ### LockManage Table
-칼럼이름 | 타입 | 널 유무 
--------- | -------- | ----------
+칼럼이름 | 타입 | 널 유무  | 외래키 유무
+-------- | -------- | ---------- | ----------
 LOCKMANAGE_PR | INTEGER | PRIMARY
 PHONE_UNIQUENUM | INTEGER | X
 MANAGETIME | DATETIME | X
