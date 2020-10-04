@@ -14,8 +14,8 @@
 - 최대한 비용감소 측면으로 발전 가능성 증가된다
 
 # AMDMServer
-## IoT장비 데이터 교환
-* 데이터 수신 형태 `IoT -> Server`
+### IoT장비 데이터 교환
+#### 데이터 수신 형태 `IoT -> Server`
   * **Type** : 기기의 형태
   * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
   * **Lock** : 현재 기기의 잠금 유무
@@ -33,7 +33,7 @@
         }
 }
 ```
-* 데이터 송신 형태 `Server -> IoT` 
+### 데이터 송신 형태 `Server -> IoT` 
   * **ForceLock** : 현재 기기의 강제 잠금 유무
   * **PhoneLock** : 기기안의 핸드폰의 강제 잠금 유무
   * **PhoneUnLock** : 기기안의 핸드폰의 강제 잠금 유무
@@ -49,7 +49,7 @@
 }
 ```
 ## Android 데이터 교환
-* 데이터 수신 형태 Type1 `Android -> Server` 
+### 데이터 수신 형태 Type1 `Android -> Server` 
   * **Type** : 기기의 형태
   * **RequestType**: 요청 타입
   * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
@@ -64,7 +64,7 @@
         "Time": "20201004_13:49:12"
 }
 ```
-* 데이터 수신 형태 Type2 `Android -> Server`
+### 데이터 수신 형태 Type2 `Android -> Server`
   * **Type** : 기기의 형태
   * **RequestType**: 요청 타입
   * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
@@ -81,7 +81,7 @@
         "Time": "20201004_13:49:12"
 }
 ```
-* 데이터 수신 형태 Type3 `Android -> Server`
+### 데이터 수신 형태 Type3 `Android -> Server`
   * **Type** : 기기의 형태
   * **RequestType**: 요청 타입
   * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
