@@ -22,7 +22,7 @@ class DataManager:
         return self.file_data
 
     def getFileStr(self):
-        return json.dumps(self.file_data,ensure_ascii=False,indent="")
+        return json.dumps(self.file_data,ensure_ascii=False,indent="").replace("\n", "")
 
 #Json 데이터를 DataManager 객체로 변환
 def JsonToDataManager(str):

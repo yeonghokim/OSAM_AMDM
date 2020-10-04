@@ -60,8 +60,8 @@
         "type": "Android",
         "requestType": 1,
         "id": 1234567,
-        "lock": 1,
-        "lockTime": "20201004_13:49:12"
+        "Lock": 1,
+        "Time": "20201004_13:49:12"
 }
 ```
 * 데이터 수신 형태 Type2(Android -> Server) 
