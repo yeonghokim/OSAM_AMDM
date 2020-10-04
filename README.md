@@ -15,12 +15,12 @@
 
 # AMDMServer
 ### IoT장비 데이터 교환
-* 데이터 수신 형태 (IoT -> Server) 
-  * type : 기기의 형태
-  * id : 기기의 아이디(초기 설정때 서버에서 지급)
-  * Lock : 현재 기기의 잠금 유무
-  * PhoneLock : 기기안의 핸드폰의 잠금 상태
-```
+* 데이터 수신 형태 `(IoT -> Server)`
+  * **type** : 기기의 형태
+  * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **Lock** : 현재 기기의 잠금 유무
+  * **PhoneLock** : 기기안의 핸드폰의 잠금 상태
+```json
 {
         "type": "IoT",
         "id": 1234567,
@@ -34,10 +34,10 @@
 }
 ```
 * 데이터 송신 형태 (Server -> IoT) 
-  * ForceLock : 현재 기기의 강제 잠금 유무
-  * PhoneLock : 기기안의 핸드폰의 강제 잠금 유무
-  * PhoneUnLock : 기기안의 핸드폰의 강제 잠금 유무
-```
+  * **ForceLock** : 현재 기기의 강제 잠금 유무
+  * **PhoneLock** : 기기안의 핸드폰의 강제 잠금 유무
+  * **PhoneUnLock** : 기기안의 핸드폰의 강제 잠금 유무
+```json
 {
         "ForceLock": 0,
         "PhoneLock": {
@@ -50,12 +50,12 @@
 ```
 ### Android 데이터 교환
 * 데이터 수신 형태 Type1(Android -> Server) 
-  * type : 기기의 형태
-  * requestType: 요청 타입
-  * id : 기기의 아이디(초기 설정때 서버에서 지급)
-  * lock : 현재 기기의 잠금 유무
-  * lockTime : 기기의 잠금 시간
-```
+  * **type** : 기기의 형태
+  * **requestType**: 요청 타입
+  * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **lock** : 현재 기기의 잠금 유무
+  * **lockTime** : 기기의 잠금 시간
+```json
 {
         "type": "Android",
         "requestType": 1,
@@ -65,11 +65,11 @@
 }
 ```
 * 데이터 수신 형태 Type2(Android -> Server) 
-  * type : 기기의 형태
-  * requestType: 요청 타입
-  * id : 기기의 아이디(초기 설정때 서버에서 지급)
-  * turnOnTime : 기기가 켜진 시간
-```
+  * **type** : 기기의 형태
+  * **requestType**: 요청 타입
+  * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **turnOnTime** : 기기가 켜진 시간
+```json
 {
         "type": "Android",
         "requestType": 2,
@@ -89,3 +89,10 @@
  (2) 다시 기기로 데이터 전송
 
 2. 다시 대기 상태
+
+# AMDMServerDB(SQLite)
+### User Table
+Property | Value type | Description
+-------- | ---------- | -----------
+key | string | The property of the model to sort by
+direction | ASC or DESC | Which direction to sort the property by

@@ -45,7 +45,6 @@ while(True):
         if(dataDM.getData("requestType")==1):
             LogD("Android_받은 것 : " + dataDM.getFileStr())
             t = threading.Thread(target=updateAndroidData, args=(dataDM,DBLocation))
-            t.daemon = True
             t.start()
             
         elif(dataDM.getData("requestType")==2):
@@ -54,7 +53,6 @@ while(True):
     elif(dataDM.getData("type")=="IoT"):
         LogD("IoT_DATA " + dataDM.getFileStr())
         t = threading.Thread(target=updateIoTData, args=(dataDM,DBLocation))
-        t.daemon = True
         t.start()
 
     connectionSocket,addr = serverSocket.accept() #accept 할동안 기다림
