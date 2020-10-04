@@ -5,6 +5,7 @@ from send.send import *
 from util.jsonManager import *
 from util.DBManager import updateIoTData
 from util.DBManager import updateAndroidData
+from util.DBManager import requestAndroidDataToIoT
 from util.jsonManager import JsonToDataManager
 from util.jsonManager import DataManager
 from util.serverLog import LogD
@@ -17,16 +18,17 @@ port = 12345
 
 serverSocket = socket(AF_INET,SOCK_STREAM)
 serverSocket.bind((host,port)) 
-serverSocket.listen()
+serverSocket.listen(5)
 
 LogD("서버 생성완료. 대기중입니다.")
 
 DM = DataManager()
 DM.setData("Type","Android")
-DM.setData("ID","1")
+DM.setData("RequestType",2)
+DM.setData("ID",1)
+DM.setData("IoTID",1)
 DM.setData("Lock",1)
-DM.setData("RequestType",1)
-DM.setData("Time","20201004_13:49:12")
+DM.setData("Time","2020-10-04 13:49:12")
 
 DBLocation= '/home/codespace/workspace/AMDMserver.sqlite3'
 
@@ -44,19 +46,21 @@ while(True):
         LogD("Android Data " + dataDM.getFileStr())
 
         if(dataDM.getData("RequestType")==1):
-        # 핸드폰이 잠길때
-        # 핸드폰이 열릴때
+            # 핸드폰이 잠길때
+            # 핸드폰이 열릴때
             LogD("Android 데이터 수신")
             t = threading.Thread(target=updateAndroidData, args=(dataDM,DBLocation))
             t.start()
             
         elif(dataDM.getData("RequestType")==2):
-        # Iot가 열릴때 (관리자) Android -> Server -> IoT
+            # Iot가 열릴때 (관리자) Android -> Server -> IoT
             LogD("Android 데이터 전송 요청")
-            #client_socket.send(data)
+            LogD("IoT Data " + dataDM.getFileStr())
+            t = threading.Thread(target=requestAndroidDataToIoT, args=(dataDM,DBLocation,"NULL"))
+            t.start()
         
         elif(dataDM.getData("RequestType")==3):
-        # 핸드폰 잠금 유무 확인(관리자)
+            # 핸드폰 잠금 유무 확인(관리자)
             LogD("Android 데이터 요청")
 
     elif(dataDM.getData("Type")=="IoT"):

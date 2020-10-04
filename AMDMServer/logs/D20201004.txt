@@ -122,3 +122,61 @@
 [AMServer 2020-10-04 08:13:10] 서버 생성완료. 대기중입니다.
 [AMServer 2020-10-04 08:13:10] Android_받은 것 : {"type": "Android","id": "1","Lock": 1,"requestType": 1,"Time": "20201004_13:49:12"}
 [AMServer 2020-10-04 08:13:10] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 12:58:00] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 12:58:00] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "20201004_13:49:12"}
+[AMServer 2020-10-04 12:58:00] Android 데이터 수신
+[AMServer 2020-10-04 12:58:00] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:00:17] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:00:17] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:00:17] Android 데이터 수신
+[AMServer 2020-10-04 13:00:17] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:01:25] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:01:25] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:01:25] Android 데이터 수신
+[AMServer 2020-10-04 13:01:25] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:06:54] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:06:54] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:06:54] Android 데이터 수신
+[AMServer 2020-10-04 13:06:54] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:08:29] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:08:29] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:08:29] Android 데이터 수신
+[AMServer 2020-10-04 13:08:33] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:09:50] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:09:50] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:09:50] Android 데이터 수신
+[AMServer 2020-10-04 13:09:50] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:10:14] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:10:14] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:10:14] Android 데이터 수신
+[AMServer 2020-10-04 13:10:14] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:11:30] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:11:30] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:11:30] Android 데이터 수신
+[AMServer 2020-10-04 13:11:30] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:12:05] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:12:05] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:12:05] Android 데이터 수신
+[AMServer 2020-10-04 13:12:05] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:14:36] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:14:36] Android Data {"Type": "Android","ID": "1","Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:14:36] Android 데이터 수신
+[AMServer 2020-10-04 13:14:36] UpdateAndroidSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:16:03] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:16:03] Android Data {"Type": "Android","ID": 2,"Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:16:03] Android 데이터 수신
+[AMServer 2020-10-04 13:16:03] UpdateAndroidSQL 완료(id : 2,Lock : 1)
+[AMServer 2020-10-04 13:17:07] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:17:07] Android Data {"Type": "Android","ID": 1,"Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:17:07] Android 데이터 수신
+[AMServer 2020-10-04 13:17:07] UpdateIoTSQL 완료(id : 1,Lock : 1)
+[AMServer 2020-10-04 13:21:46] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:21:46] Android Data {"Type": "Android","ID": 1,"Lock": 0,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:21:46] Android 데이터 수신
+[AMServer 2020-10-04 13:21:46] UpdateAndroidSQL 완료(id : 1,Lock : 0)
+[AMServer 2020-10-04 13:22:07] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:22:07] IoT Data {"Type": "IoT","ID": 1,"Lock": 0,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:22:07] UpdateIoTSQL 완료(id : 1,Lock : 0)
+[AMServer 2020-10-04 13:22:19] 서버 생성완료. 대기중입니다.
+[AMServer 2020-10-04 13:22:19] IoT Data {"Type": "IoT","ID": 1,"Lock": 1,"RequestType": 1,"Time": "2020-10-04 13:49:12"}
+[AMServer 2020-10-04 13:22:19] UpdateIoTSQL 완료(id : 1,Lock : 1)

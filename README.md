@@ -43,9 +43,9 @@ python으로 이루어진 TCP 소켓 서버입니다.
         "ForceLock": 0,
         "PhoneLock": {
                 "19-760730003": 1
-        }
+        },
         "PhoneUnLock": {
-                "19-760730004": 0,
+                "19-760730004": 0
         }
 }
 ```
@@ -62,7 +62,7 @@ python으로 이루어진 TCP 소켓 서버입니다.
         "RequestType": 1,
         "ID": 1234567,
         "Lock": 1,
-        "Time": "20201004_13:49:12"
+        "Time": "2020-10-04 13:49:12"
 }
 ```
 ### 데이터 수신 형태 Type2 `Android -> Server`
@@ -79,7 +79,7 @@ python으로 이루어진 TCP 소켓 서버입니다.
         "ID": 1234567,
         "IoTID" : 123,
         "Lock" : 1,
-        "Time": "20201004_13:49:12"
+        "Time": "2020-10-04 13:49:12"
 }
 ```
 ### 데이터 수신 형태 Type3 `Android -> Server`
@@ -92,7 +92,7 @@ python으로 이루어진 TCP 소켓 서버입니다.
         "Type": "Android",
         "RequestType": 3,
         "ID": 1234567,
-        "TurnOnTime": "20201004_13:49:12"
+        "TurnOnTime": "2020-10-04 13:49:12"
 }
 ```
 # DataBase (SQLite)
