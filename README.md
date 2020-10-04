@@ -15,7 +15,7 @@
 
 # AMDMServer
 ### IoT장비 데이터 교환
-* 데이터 수신 형태 `(IoT -> Server)`
+* 데이터 수신 형태 `IoT -> Server`
   * **type** : 기기의 형태
   * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
   * **Lock** : 현재 기기의 잠금 유무
@@ -33,7 +33,7 @@
         }
 }
 ```
-* 데이터 송신 형태 (Server -> IoT) 
+* 데이터 송신 형태 `Server -> IoT` 
   * **ForceLock** : 현재 기기의 강제 잠금 유무
   * **PhoneLock** : 기기안의 핸드폰의 강제 잠금 유무
   * **PhoneUnLock** : 기기안의 핸드폰의 강제 잠금 유무
@@ -49,7 +49,7 @@
 }
 ```
 ### Android 데이터 교환
-* 데이터 수신 형태 Type1(Android -> Server) 
+* 데이터 수신 형태 Type1 `Android -> Server` 
   * **type** : 기기의 형태
   * **requestType**: 요청 타입
   * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
@@ -64,7 +64,7 @@
         "Time": "20201004_13:49:12"
 }
 ```
-* 데이터 수신 형태 Type2(Android -> Server) 
+* 데이터 수신 형태 Type2 `Android -> Server`
   * **type** : 기기의 형태
   * **requestType**: 요청 타입
   * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
@@ -90,9 +90,9 @@
 
 2. 다시 대기 상태
 
-# AMDMServerDB(SQLite)
+# DataBase (SQLite)
 ### User Table
-Property | Value type | Description
--------- | ---------- | -----------
-key | string | The property of the model to sort by
-direction | ASC or DESC | Which direction to sort the property by
+구분 | USER_PR | USER_ARMYNUMBER | USER_NAME | PASSWORD | USER_DISCHARGEDATE | UPDATEDATE
+-------- | -------- | ---------- | ----------- | -------- | ---------- | -----------
+타입 | INTEGER | CHAR | CHAR | CHAR | DATETIME | DATETIME
+널 유무 | X | X | X | X | O | X 
