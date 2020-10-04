@@ -44,15 +44,15 @@ while(1==1):
         
     elif(dataDM.getData("type")=="IoT"):
         LogD("IoT_DATA " + dataDM.getFileStr().replace("\n", ""))
-        
         #id의 Lock과 phoneLock을 업데이트
         if(SQLManager.updateIoTData(dataDM)):
-            LogD("업데이트가 정상적으로 이루어졌습니다.")
+            LogD("업데이트가 정상적으로 이루어졌습니다.") 
+            if(Debug==0):
+                connectionSocket.send("Success Comment".encode("utf-8"))
         else:
             LogE("업데이트에 오류가 생겼습니다.")
-        
-        if(Debug==0):
-            connectionSocket.send("I am server".encode("utf-8"))
+            if(Debug==0):
+                connectionSocket.send("Error Comment".encode("utf-8"))
 
     else:
         # 안드로이드 데이터 보냄
