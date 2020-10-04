@@ -1,10 +1,11 @@
 import json
 from collections import OrderedDict
 
+#Json을 관리해주는 클래스
 class DataManager:
     def __init__(self):
         self.file_data = OrderedDict()
-
+        
     def setData(self,key,data):
         self.file_data[key]=data
 
@@ -21,7 +22,13 @@ class DataManager:
         return self.file_data
 
     def getFileStr(self):
-        return json.dumps(self.file_data,ensure_ascii=False,indent="\t")
+        return json.dumps(self.file_data,ensure_ascii=False,indent="")
+
+#Json 데이터를 DataManager 객체로 변환
+def JsonToDataManager(str):
+    NDM = DataManager()
+    NDM.file_data = json.JSONDecoder(object_pairs_hook=OrderedDict).decode(str)
+    return NDM
 
 # DM = DataManager()
 # DM.setData("name","Computer")
