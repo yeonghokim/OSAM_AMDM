@@ -16,14 +16,14 @@
 # AMDMServer
 ### IoT장비 데이터 교환
 * 데이터 수신 형태 `IoT -> Server`
-  * **type** : 기기의 형태
-  * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **Type** : 기기의 형태
+  * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
   * **Lock** : 현재 기기의 잠금 유무
   * **PhoneLock** : 기기안의 핸드폰의 잠금 상태
 ```json
 {
-        "type": "IoT",
-        "id": 1234567,
+        "Type": "IoT",
+        "ID": 1234567,
         "Lock": 0,
         "PhoneLock": {
                 "19-760730001": 0,
@@ -50,46 +50,50 @@
 ```
 ### Android 데이터 교환
 * 데이터 수신 형태 Type1 `Android -> Server` 
-  * **type** : 기기의 형태
-  * **requestType**: 요청 타입
-  * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
-  * **lock** : 현재 기기의 잠금 유무
-  * **lockTime** : 기기의 잠금 시간
+  * **Type** : 기기의 형태
+  * **RequestType**: 요청 타입
+  * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **Lock** : 현재 기기의 잠금 유무
+  * **Time** : 기기의 잠금 시간
 ```json
 {
-        "type": "Android",
-        "requestType": 1,
-        "id": 1234567,
+        "Type": "Android",
+        "RequestType": 1,
+        "ID": 1234567,
         "Lock": 1,
         "Time": "20201004_13:49:12"
 }
 ```
 * 데이터 수신 형태 Type2 `Android -> Server`
-  * **type** : 기기의 형태
-  * **requestType**: 요청 타입
-  * **id** : 기기의 아이디(초기 설정때 서버에서 지급)
-  * **turnOnTime** : 기기가 켜진 시간
+  * **Type** : 기기의 형태
+  * **RequestType**: 요청 타입
+  * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **IoTID** : IoT기기의 아이디
+  * **Lock** : 잠글지 열지
+  * **Time** : 요청 시간
 ```json
 {
-        "type": "Android",
-        "requestType": 2,
-        "id": 1234567,
-        "turnOnTime": "20201004_13:49:12"
+        "Type": "Android",
+        "RequestType": 2,
+        "ID": 1234567,
+        "IoTID" : 123,
+        "Lock" : 1,
+        "Time": "20201004_13:49:12"
 }
 ```
-사이클
-1. 서버 대기상태
-
-- 데이터를 받음 
- (1) DB 처리를 함
- (2) 다시 기기로 데이터 전송
-
-- 데이터 요청
- (1) DB 처리를 함
- (2) 다시 기기로 데이터 전송
-
-2. 다시 대기 상태
-
+* 데이터 수신 형태 Type3 `Android -> Server`
+  * **Type** : 기기의 형태
+  * **RequestType**: 요청 타입
+  * **ID** : 기기의 아이디(초기 설정때 서버에서 지급)
+  * **TurnOnTime** : 기기가 켜진 시간
+```json
+{
+        "Type": "Android",
+        "RequestType": 3,
+        "ID": 1234567,
+        "TurnOnTime": "20201004_13:49:12"
+}
+```
 # DataBase (SQLite)
 ### User Table
 칼럼이름 | 타입 | 널 유무  | 외래키 유무
@@ -100,7 +104,7 @@ USER_NAME | CHAR | X
 PASSWORD | CHAR | X
 USER_DISCHARGEDATE | DATETIME | O 
 UPDATEDATE | DATETIME | X
-### Phone Table
+### Phone TableW
 칼럼이름 | 타입 | 널 유무  | 외래키 유무
 -------- | -------- | ---------- | ----------
 PHONE_PR | INTEGER | PRIMARY

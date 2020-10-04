@@ -17,15 +17,15 @@ port = 12345
 
 serverSocket = socket(AF_INET,SOCK_STREAM)
 serverSocket.bind((host,port)) 
-serverSocket.listen(1)
+serverSocket.listen()
 
 LogD("서버 생성완료. 대기중입니다.")
 
 DM = DataManager()
-DM.setData("type","Android")
-DM.setData("id","1")
+DM.setData("Type","Android")
+DM.setData("ID","1")
 DM.setData("Lock",1)
-DM.setData("requestType",1)
+DM.setData("RequestType",1)
 DM.setData("Time","20201004_13:49:12")
 
 DBLocation= '/home/codespace/workspace/AMDMserver.sqlite3'
@@ -40,22 +40,34 @@ while(True):
     data = DM.getFileStr()
     dataDM = JsonToDataManager(data)
 
-    if(dataDM.getData("type")=="Android"):
+    if(dataDM.getData("Type")=="Android"):
+        LogD("Android Data " + dataDM.getFileStr())
 
-        if(dataDM.getData("requestType")==1):
-            LogD("Android_받은 것 : " + dataDM.getFileStr())
+        if(dataDM.getData("RequestType")==1):
+        # 핸드폰이 잠길때
+        # 핸드폰이 열릴때
+            LogD("Android 데이터 수신")
             t = threading.Thread(target=updateAndroidData, args=(dataDM,DBLocation))
             t.start()
             
-        elif(dataDM.getData("requestType")==2):
+        elif(dataDM.getData("RequestType")==2):
+        # Iot가 열릴때 (관리자) Android -> Server -> IoT
+            LogD("Android 데이터 전송 요청")
+            #client_socket.send(data)
+        
+        elif(dataDM.getData("RequestType")==3):
+        # 핸드폰 잠금 유무 확인(관리자)
             LogD("Android 데이터 요청")
 
-    elif(dataDM.getData("type")=="IoT"):
-        LogD("IoT_DATA " + dataDM.getFileStr())
+    elif(dataDM.getData("Type")=="IoT"):
+        # Iot가 잠길때
+        LogD("IoT Data " + dataDM.getFileStr())
         t = threading.Thread(target=updateIoTData, args=(dataDM,DBLocation))
         t.start()
 
     connectionSocket,addr = serverSocket.accept() #accept 할동안 기다림
 
 serverSocket.close()
+
+# Iot 강제 잠금(관리자) 서버가 요청
 
