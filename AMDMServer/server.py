@@ -17,7 +17,7 @@ LogD("서버 생성완료. 대기중입니다.")
 
 DM = DataManager()
 DM.setData("type","IoT")
-DM.setData("id","1234567")
+DM.setData("id","1")
 DM.setData("Lock",0)
 DM.setDatasFirst("PhoneLock")
 DM.setDatas("PhoneLock",'19-760730001',0)
@@ -25,7 +25,7 @@ DM.setDatas("PhoneLock",'19-760730002',0)
 DM.setDatas("PhoneLock",'19-760730003',1)
 DM.setDatas("PhoneLock",'19-760730004',0)
 
-SQLManager = MysqlManager()
+SQLManager = sqlManager()
 
 while(1==1):
     if(Debug==0):
